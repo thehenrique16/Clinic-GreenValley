@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clínica Veterinária Vida Animal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/616/616408.png" type="image/x-icon">
+</head>
+<body>
+  <!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Ícone Clínica" />
+    <span>Clínica Veterinária Green Valley</span>
+  </div>
+  <button class="abrir-modal" onclick="abrirModal()" title="Cadastrar Médico">
+  💉
+</button>
+</nav>
+
+
+  <!-- Mensagem de sucesso -->
+<div id="mensagem" class="mensagem-sucesso">Sucesso!</div>
+
+  <!-- Formulários -->
+<section class="form-wrapper">
+    <div class="form-container">
+      <h2>Cadastro de Animal</h2>
+      <input id="animal-nome" placeholder="Nome do animal" />
+      <input id="animal-raca" placeholder="Raça do animal" />
+      <button onclick="cadastrarAnimal()">Cadastrar Animal</button>
+    </div>
+
+<div class="form-container">
+      <h2>Cadastro de Usuário</h2>
+      <input id="usuario-nome" placeholder="Nome do dono" />
+      <input id="usuario-email" placeholder="Email" />
+      <input id="usuario-senha" placeholder="Senha" />
+      <label for="usuario-animal">Selecione o animal</label>
+      <select id="usuario-animal"></select>
+      <button onclick="cadastrarUsuario()">Cadastrar Usuário</button>
+    </div>
+
+
+<div class="form-container">
+      <h2>Agendar Consulta</h2>
+      <label for="consulta-usuario">Usuário</label>
+      <select id="consulta-usuario"></select>
+      <label for="consulta-animal">Animal</label>
+      <select id="consulta-animal"></select>
+      <label for="consulta-doutor">Doutor</label>
+      <select id="consulta-doutor"></select>
+      <label for="consulta-data">Data</label>
+      <input type="date" id="consulta-data" />
+      <label for="consulta-hora">Hora</label>
+      <input type="time" id="consulta-hora" />
+
+      <input id="consulta-descricao" placeholder="Descrição da consulta" />
+      <button onclick="agendarConsulta()">Agendar Consulta</button>
+    </div>
+  </section>
+
+  <!-- Prontuários -->
+<div class="result">
+    <h2>Prontuário (Consultas Agendadas)</h2>
+    <ul id="lista-consultas"></ul>
+  </div>
+
+  <!-- Modal Cadastrar Médico -->
+<div id="modal-medico" class="modal">
+  <div class="modal-content">
+    <h2>Cadastrar Médico</h2>
+    <input id="medico-nome" placeholder="Nome do Médico" />
+    <input id="medico-crm" placeholder="CRM" />
+    <input id="funcionario-nome" placeholder="Seu Nome (Funcionário)" />
+    <input id="funcionario-senha" type="password" placeholder="Sua Senha" />
+    <button onclick="cadastrarMedico()">Confirmar Cadastro</button>
+    <button class="fechar-modal" onclick="fecharModal()">Cancelar</button>
+  </div>
+</div>
+
+<div id="modal-medico" class="modal">
+  <div class="modal-content">
+    <h2>Cadastrar Médico</h2>
+    <!-- seus inputs aqui -->
+    <button onclick="fecharModal()">Cancelar</button>
+  </div>
+</div>
+
+  <!-- Rodapé -->
+<footer>
+    &copy; 2025 Clínica Veterinária Vida Animal. Todos os direitos reservados.
+    Rua Ana Bandeira, 777, Centro Toledo-PR.
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
